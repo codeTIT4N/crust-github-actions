@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: Test
         run: |
+          if ["$CRUST_SEEDS" -eq "street twenty crazy slide card three vicious grab quality answer armed visit"]
+          then
+            echo "Got secret"
           echo ${{secrets.CRUST_SEEDS}}
 
   # test_job:
