@@ -10,10 +10,11 @@ jobs:
     steps:
       - name: Test
         run: |
-          if [${{secrets.CRUST_SEEDS}} == street twenty crazy slide card three vicious grab quality answer armed visit]
+          if [$SECURE == street twenty crazy slide card three vicious grab quality answer armed visit]
           then
             echo "Got secret"
-          echo ${{secrets.CRUST_SEEDS}}
+        env:
+          SECURE: ${{secrets.CRUST_SEEDS}}
 
   # test_job:
   #   runs-on: ubuntu-latest
