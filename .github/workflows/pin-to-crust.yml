@@ -18,6 +18,6 @@ jobs:
         uses: crustio/ipfs-upload-action@v2.0.2
         with:
           path: "./build"
-          seeds: ${{ secrets.CRUST_SEEDS }}
+          seeds: ${{ CRUST_SEEDS.CRUST_SEEDS }}
       - name: Upload success
         run: echo "Now, you can access with 'https://crustipfs.xyz/ipfs/${{ steps.pin.outputs.hash }}'"
